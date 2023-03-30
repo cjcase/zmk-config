@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/ext_power.h>
 
 / {
@@ -41,11 +42,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&bt BT_CLR      &bt BT_SEL 0       &bt BT_SEL 1       &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                &trans         &trans     &trans  &kp MINUS        &kp EQUAL  &kp DEL
-    &trans            &trans             &kp UP             &trans        &trans        &trans                              &kp HOME  &kp PAGE_DOWN  &kp PG_UP    &kp END  &kp PRINTSCREEN   &trans
-    &trans          &kp LEFT           &kp DOWN          &kp RIGHT        &trans        &trans                              &kp LEFT       &kp DOWN     &kp UP  &kp RIGHT           &trans   &trans
-    &trans  &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG        &trans        &trans  &kp K_VOL_DN  &kp K_VOL_UP    &trans         &trans     &trans     &trans           &trans   &trans
-                                                            &trans        &trans        &trans        &trans        &trans    &trans         &trans     &trans
+&bt BT_CLR      &bt BT_SEL 0       &bt BT_SEL 1       &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                              &out OUT_BLE   &out OUT_USB  &out OUT_TOG  &kp MINUS        &kp EQUAL  &kp DEL
+    &trans            &trans             &kp UP             &trans        &trans        &trans                                  &kp HOME  &kp PAGE_DOWN     &kp PG_UP    &kp END  &kp PRINTSCREEN   &trans
+    &trans          &kp LEFT           &kp DOWN          &kp RIGHT        &trans        &trans                                  &kp LEFT       &kp DOWN        &kp UP  &kp RIGHT           &trans   &trans
+    &trans  &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG        &trans        &trans  &kp K_VOL_DN  &kp K_VOL_UP        &trans         &trans        &trans     &trans           &trans   &trans
+                                                            &trans        &trans        &trans        &trans        &trans        &trans         &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
