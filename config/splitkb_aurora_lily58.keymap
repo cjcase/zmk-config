@@ -10,6 +10,17 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
+// nice!view adapter override
+// I added a "bodge wire" from the nice!view CS pin to the nice!nanov2 pin P1.01 (101)
+// Docs suggest using P0.06[D1] (006) but the Aurora lily58 uses that pin for RGB
+// I have no RGB but would like to avoid this pain in the future
+nice_view_spi: &spi0 {
+    cs-gpios = <&gpio1 1 GPIO_ACTIVE_HIGH>; //gpio1 is P1.01 (101)
+};
+
+
+// Keymap definition
+
 / {
     keymap {
         compatible = "zmk,keymap";
