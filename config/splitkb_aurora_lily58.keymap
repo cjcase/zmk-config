@@ -14,10 +14,10 @@
 // I added a "bodge wire" from the nice!view CS pin to the nice!nanov2 pin P1.01 (101)
 // Docs suggest using P0.06[D1] (006) but the Aurora lily58 uses that pin for RGB
 // I have no RGB but would like to avoid this pain in the future
+
 nice_view_spi: &spi0 {
     cs-gpios = <&gpio1 1 GPIO_ACTIVE_HIGH>; //gpio1 is P1.01 (101)
 };
-
 
 // Keymap definition
 
@@ -52,7 +52,7 @@ nice_view_spi: &spi0 {
 
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0      &bt BT_SEL 1       &bt BT_SEL 2       &bt BT_SEL 3  &bt BT_SEL 4                              &out OUT_BLE  &out OUT_USB   &out OUT_TOG  &kp MINUS  &kp EQUAL        &kp DEL
-&trans      &trans            &kp UP             &out OUT_TOG       &out OUT_USB  &out OUT_BLE                              &kp HOME      &kp PAGE_DOWN  &kp PG_UP     &kp END    &kp PRINTSCREEN  &trans
+&bt BT_PRV  &bt BT_NXT        &kp UP             &out OUT_TOG       &out OUT_USB  &out OUT_BLE                              &kp HOME      &kp PAGE_DOWN  &kp PG_UP     &kp END    &kp PRINTSCREEN  &trans
 &trans      &kp LEFT          &kp DOWN           &kp RIGHT          &trans        &trans                                    &kp LEFT      &kp DOWN       &kp UP        &kp RIGHT  &trans           &trans
 &trans      &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &trans        &trans        &kp K_VOL_DN  &kp K_VOL_UP  &trans        &trans         &trans        &trans     &trans           &trans
                                                  &trans             &trans        &trans        &trans        &trans        &trans        &trans         &trans
