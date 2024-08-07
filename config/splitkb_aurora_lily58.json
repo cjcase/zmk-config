@@ -4,7 +4,7 @@
   "author": "https://github.com/cjcase/zmk-config",
   "notes": "### Details\n\nComponent   | Description\n----------  | --------------------\nController  | BLE Enabled Nice!Nanov2\nLCDs        | Nice!view e-paper screen\nBattery     | Li-Po 350926 100mAh (27.5 x 9.5 x 3.4 mm)\nSwitches    | Gazzew Boba U4T Thocky Tactile Clear (62g)\nKeycaps     | Drop + Matt3o MT3 Susuwatari Keycaps\n",
   "switchMount": "cherry",
-  "plate": true
+  "plate": true,
   "layouts": {
     "default_transform": {
       "name": "default_transform",
